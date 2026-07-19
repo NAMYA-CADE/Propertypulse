@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Property Prediction</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<section class="hero">
+
+
+<h1>
+PropertyPulse
+</h1>
+
+
+<h2>
+Analyze Your Property
+</h2>
+
+
+<form action="/predict" method="POST">
+
+
+<label>
+City
+</label>
+
+<select name="city" required>
+
+    <option value="">Select City</option>
+    <option value="delhi">Delhi</option>
+    <option value="mumbai">Mumbai</option>
+    <option value="pune">Pune</option>
+    <option value="gurgaon">Gurgaon</option>
+
+</select>
+
+
+
+<label>
+Area (sq ft)
+</label>
+
+<input 
+type="number" 
+name="area" 
+placeholder="Enter property area"
+required>
+
+
+
+<label>
+Bedrooms
+</label>
+
+<input 
+type="number" 
+name="bedrooms" 
+placeholder="Number of bedrooms"
+required>
+
+
+
+<label>
+Bathrooms
+</label>
+
+<input 
+type="number" 
+name="bathrooms" 
+placeholder="Number of bathrooms"
+required>
+
+
+
+<label>
+Property Age (years)
+</label>
+
+<input 
+type="number" 
+name="age" 
+placeholder="Age of property"
+required>
+
+
+
+<button type="submit">
+Analyze Property
+</button>
+
+
+</form>
+
+
+</section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Property Result</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<section class="hero">
+
+
+<h1>
+PropertyPulse
+</h1>
+
+
+<h2>
+Market Valuation
+</h2>
+
+
+<h1>
+{{ price }}
+</h1>
+
+
+<p>
+Estimated property price based on location and property features.
+</p>
+
+
+
+<hr>
+
+
+<h2>
+Investment Score
+</h2>
+
+
+<h1>
+{{ stars }}
+</h1>
+
+
+
+<h3>
+Property Analysis
+</h3>
+
+
+<ul>
+
+{% for reason in reasons %}
+
+<li>
+{{ reason }}
+</li>
+
+{% endfor %}
+
+</ul>
+
+
+
+<a href="/predict">
+
+<button>
+Analyze Another Property
+</button>
+
+</a>
+
+
+
+</section>
+
+
+</body>
+
+</html>
